@@ -4,7 +4,7 @@
 # Title: PLL phase comparison
 # Author: Paul Miller
 # Description: gnuradio flow graph
-# Generated: Fri Feb 26 17:57:53 2010
+# Generated: Fri Feb 26 18:01:08 2010
 ##################################################
 
 from gnuradio import gr
@@ -27,7 +27,7 @@ class pll(gr.top_block):
 		self.gr_float_to_complex_0 = gr.float_to_complex()
 		self.gr_float_to_complex_1 = gr.float_to_complex()
 		self.gr_wavfile_source_0 = gr.wavfile_source("8k.wav", False)
-		self.gr_wavfile_source_1 = gr.wavfile_source("14k", False)
+		self.gr_wavfile_source_1 = gr.wavfile_source("14k.wav", False)
 		self.wmu_phase_compute_cf_0 = wmu.phase_compute_cf()
 
 		##################################################
