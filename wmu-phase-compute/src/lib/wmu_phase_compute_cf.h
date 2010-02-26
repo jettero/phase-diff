@@ -3,7 +3,7 @@
 
 #include <gr_block.h>
 
-class gr_phase_compute_cf;
+class wmu_phase_compute_cf;
 
 /*
  * We use boost::shared_ptr's instead of raw pointers for all access
@@ -16,34 +16,34 @@ class gr_phase_compute_cf;
  *
  * As a convention, the _sptr suffix indicates a boost::shared_ptr
  */
-typedef boost::shared_ptr<gr_phase_compute_cf> gr_phase_compute_cf_sptr;
+typedef boost::shared_ptr<wmu_phase_compute_cf> wmu_phase_compute_cf_sptr;
 
 /*!
- * \brief Return a shared_ptr to a new instance of gr_phase_compute_cf.
+ * \brief Return a shared_ptr to a new instance of wmu_phase_compute_cf.
  *
- * To avoid accidental use of raw pointers, gr_phase_compute_cf's
- * constructor is private.  gr_make_phase_compute_cf is the public
+ * To avoid accidental use of raw pointers, wmu_phase_compute_cf's
+ * constructor is private.  wmu_make_phase_compute_cf is the public
  * interface for creating new instances.
  */
-gr_phase_compute_cf_sptr gr_make_phase_compute_cf();
+wmu_phase_compute_cf_sptr wmu_make_phase_compute_cf();
 
 /*!
  * \brief square a stream of bytes.
  * \ingroup block
  */
-class gr_phase_compute_cf : public gr_block {
+class wmu_phase_compute_cf : public gr_block {
     private:
         // The friend declaration allows phase_make_compute_cf to
         // access the private constructor.
 
-        friend gr_phase_compute_cf_sptr gr_make_phase_compute_cf();
+        friend wmu_phase_compute_cf_sptr wmu_make_phase_compute_cf();
 
         float mod_2pi(float in);
 
-        gr_phase_compute_cf(); // private constructor
+        wmu_phase_compute_cf(); // private constructor
 
     public:
-        ~gr_phase_compute_cf(); // public destructor
+        ~wmu_phase_compute_cf(); // public destructor
 
         // Where all the action really happens
 

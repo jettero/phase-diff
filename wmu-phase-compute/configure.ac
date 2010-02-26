@@ -21,11 +21,11 @@ dnl
 
 AC_INIT
 AC_PREREQ(2.57)
-AC_CONFIG_SRCDIR([src/lib/phase.i])
+AC_CONFIG_SRCDIR([src/lib/wmu.i])
 AM_CONFIG_HEADER(config.h)
 AC_CANONICAL_TARGET([])
 AC_CONFIG_AUX_DIR([.])
-AM_INIT_AUTOMAKE(gr-phase,0.0.1)
+AM_INIT_AUTOMAKE(wmu-phase,0.0.1)
 
 GR_X86_64
 dnl LF_CONFIGURE_CC

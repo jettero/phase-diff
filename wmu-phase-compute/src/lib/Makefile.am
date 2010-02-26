@@ -21,7 +21,7 @@
 
 include $(top_srcdir)/Makefile.common
 
-# Install this stuff so that it ends up as the gnuradio.phase module
+# Install this stuff so that it ends up as the gnuradio.wmu module
 # This usually ends up at:
 #   ${prefix}/lib/python${python_version}/site-packages/gnuradio
 
@@ -42,42 +42,42 @@ NON_LOCAL_IFILES =			\
 
 
 LOCAL_IFILES = 				\
-	$(top_srcdir)/src/lib/phase.i				
+	$(top_srcdir)/src/lib/wmu.i				
 
 # These files are built by SWIG.  The first is the C++ glue.
-# The second is the python wrapper that loads the _phase shared library
+# The second is the python wrapper that loads the _wmu shared library
 # and knows how to call our extensions.
 
 BUILT_SOURCES = 			\
-	phase.cc			\
-	phase.py				
+	wmu.cc			\
+	wmu.py				
 
-# This gets phase.py installed in the right place
+# This gets wmu.py installed in the right place
 ourpython_PYTHON =			\
-	phase.py
+	wmu.py
 
-ourlib_LTLIBRARIES = _phase.la
+ourlib_LTLIBRARIES = _wmu.la
 
 # These are the source files that go into the shared library
-_phase_la_SOURCES = 			\
-	phase.cc			\
-	gr_phase_compute_cf.cc
+_wmu_la_SOURCES = 			\
+	wmu.cc			\
+	wmu_phase_compute_cf.cc
 
 # magic flags
-_phase_la_LDFLAGS = $(NO_UNDEFINED) -module -avoid-version
+_wmu_la_LDFLAGS = $(NO_UNDEFINED) -module -avoid-version
 
 # link the library against some comon swig runtime code and the 
 # c++ standard library
-_phase_la_LIBADD = 			\
+_wmu_la_LIBADD = 			\
 	$(PYTHON_LDFLAGS)		\
 	-lstdc++			
 
-phase.cc phase.py: $(LOCAL_IFILES) $(ALL_IFILES)
-	$(SWIG) $(SWIGPYTHONARGS) -module phase -o phase.cc $(LOCAL_IFILES)
+wmu.cc wmu.py: $(LOCAL_IFILES) $(ALL_IFILES)
+	$(SWIG) $(SWIGPYTHONARGS) -module wmu -o wmu.cc $(LOCAL_IFILES)
 
 # These headers get installed in ${prefix}/include/gnuradio
 grinclude_HEADERS =			\
-	gr_phase_compute_cf.h
+	wmu_phase_compute_cf.h
 
 
 # These swig headers get installed in ${prefix}/include/gnuradio/swig

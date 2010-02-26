@@ -2,10 +2,10 @@
 
 <block>
 	<name>Phase Difference</name>
-	<key>gr_phase_compute_cf</key>
+	<key>wmu_phase_compute_cf</key>
     <category>Custom</category>
-	<import>from gnuradio import gr</import>
-	<make>gr.phase_compute_cf()</make>
+	<import>from gnuradio import wmu</import>
+	<make>wmu.phase_compute_cf()</make>
 	<sink>
 		<name>in1</name>
 		<type>complex</type>
