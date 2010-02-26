@@ -1,65 +1,43 @@
 <?xml version='1.0' encoding='ASCII'?>
 <flow_graph>
-  <timestamp>Fri Feb 26 13:12:53 2010</timestamp>
+  <timestamp>Fri Feb 26 13:24:31 2010</timestamp>
   <block>
-    <key>variable</key>
+    <key>options</key>
     <param>
       <key>id</key>
-      <value>samp_rate</value>
+      <value>am_mod</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>value</key>
-      <value>32000</value>
+      <key>title</key>
+      <value>am modulator</value>
+    </param>
+    <param>
+      <key>author</key>
+      <value>Paul Miller</value>
+    </param>
+    <param>
+      <key>description</key>
+      <value>gnuradio flow graph</value>
+    </param>
+    <param>
+      <key>window_size</key>
+      <value>1280, 1024</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>no_gui</value>
+    </param>
+    <param>
+      <key>category</key>
+      <value>Custom</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 141)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>freq</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>8000</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(19, 220)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_float_to_complex</key>
-    <param>
-      <key>id</key>
-      <value>gr_float_to_complex_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(382, 157)</value>
+      <value>(10, 10)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -103,37 +81,6 @@
     <param>
       <key>_coordinate</key>
       <value>(207, 17)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>gr_wavfile_source</key>
-    <param>
-      <key>id</key>
-      <value>gr_wavfile_source_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>orig.wav</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>nchan</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(117, 147)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -195,6 +142,79 @@
     </param>
   </block>
   <block>
+    <key>gr_float_to_complex</key>
+    <param>
+      <key>id</key>
+      <value>gr_float_to_complex_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(351, 157)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>44100</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(16, 141)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>gr_wavfile_source</key>
+    <param>
+      <key>id</key>
+      <value>gr_wavfile_source_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>orig.wav</value>
+    </param>
+    <param>
+      <key>repeat</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>nchan</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(117, 147)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>gr_wavfile_sink</key>
     <param>
       <key>id</key>
@@ -206,7 +226,7 @@
     </param>
     <param>
       <key>file</key>
-      <value>am-up-mixed.wav</value>
+      <value>8k.wav</value>
     </param>
     <param>
       <key>nchan</key>
@@ -218,7 +238,7 @@
     </param>
     <param>
       <key>bits_per_sample</key>
-      <value>8</value>
+      <value>16</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -230,42 +250,22 @@
     </param>
   </block>
   <block>
-    <key>options</key>
+    <key>variable</key>
     <param>
       <key>id</key>
-      <value>am_mod</value>
+      <value>freq</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>title</key>
-      <value>am modulator</value>
-    </param>
-    <param>
-      <key>author</key>
-      <value>Paul Miller</value>
-    </param>
-    <param>
-      <key>description</key>
-      <value>gnuradio flow graph</value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>1280, 1024</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>wx_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
+      <key>value</key>
+      <value>8000</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(10, 10)</value>
+      <value>(19, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
