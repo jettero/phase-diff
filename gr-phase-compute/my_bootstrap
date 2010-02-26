@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+git clean -dfx
+bash -e ./bootstrap
+./configure --prefix=/usr/local
+make

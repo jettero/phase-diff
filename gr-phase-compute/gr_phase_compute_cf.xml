@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<block>
+	<name>Phase Difference</name>
+	<key>gr_phase_compute_cf</key>
+    <category>Custom</category>
+	<import>from gnuradio import gr</import>
+	<make>gr.phase_compute_cf()</make>
+	<sink>
+		<name>in1</name>
+		<type>complex</type>
+	</sink>
+	<sink>
+		<name>in2</name>
+		<type>complex</type>
+	</sink>
+	<source>
+		<name>out</name>
+		<type>float</type>
+	</source>
+</block>
