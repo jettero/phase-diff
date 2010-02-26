@@ -168,10 +168,10 @@
     </param>
   </block>
   <block>
-    <key>gr_phase_compute_cf</key>
+    <key>wmu_phase_compute_cf</key>
     <param>
       <key>id</key>
-      <value>gr_phase_compute_cf_0</value>
+      <value>wmu_phase_compute_cf_0</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -243,18 +243,18 @@
   </connection>
   <connection>
     <source_block_id>gr_float_to_complex_1</source_block_id>
-    <sink_block_id>gr_phase_compute_cf_0</sink_block_id>
+    <sink_block_id>wmu_phase_compute_cf_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>gr_float_to_complex_0</source_block_id>
-    <sink_block_id>gr_phase_compute_cf_0</sink_block_id>
+    <sink_block_id>wmu_phase_compute_cf_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>gr_phase_compute_cf_0</source_block_id>
+    <source_block_id>wmu_phase_compute_cf_0</source_block_id>
     <sink_block_id>gr_file_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
