@@ -1,19 +1,19 @@
 #!/usr/bin/env python
 ##################################################
 # Gnuradio Python Flow Graph
-# Title: PLL phase comparison
+# Title: Phase Diff
 # Author: Paul Miller
 # Description: gnuradio flow graph
-# Generated: Fri Feb 26 18:01:08 2010
+# Generated: Fri Feb 26 18:29:36 2010
 ##################################################
 
 from gnuradio import gr
 from gnuradio import wmu
 
-class pll(gr.top_block):
+class pdiff(gr.top_block):
 
 	def __init__(self):
-		gr.top_block.__init__(self, "PLL phase comparison")
+		gr.top_block.__init__(self, "Phase Diff")
 
 		##################################################
 		# Variables
@@ -45,7 +45,7 @@ class pll(gr.top_block):
 		self.samp_rate = samp_rate
 
 if __name__ == '__main__':
-	tb = pll()
+	tb = pdiff()
 	tb.start()
 	raw_input('Press Enter to quit: ')
 	tb.stop()
