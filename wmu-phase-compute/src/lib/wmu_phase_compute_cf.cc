@@ -21,6 +21,7 @@ wmu_phase_compute_cf::~wmu_phase_compute_cf() {
 }
 
 float wmu_phase_compute_cf::mod_2pi(float in) {
+    // This function is copied from gr_pll_refout_cc.cc
 
     if(in>M_PI)
         return in-M_TWOPI;
@@ -39,6 +40,8 @@ int wmu_phase_compute_cf::general_work (int noutput_items,
     const gr_complex *i1 = (gr_complex *) input_items[0];
     const gr_complex *i2 = (gr_complex *) input_items[1];
     float *o             = (float *) output_items[0];
+
+    // gr_fast_atan2f(samp,samp) is copied from gr_pll_refout_cc.cc
 
     *o = mod_2pi(
         gr_fast_atan2f(i1->imag(), i1->real())
